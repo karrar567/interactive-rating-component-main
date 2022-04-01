@@ -29,7 +29,7 @@
   <body>
     <!-- Rating state start -->
 
-    <div class="rating-card">
+    <div id="rating-card" class="rating-card">
       <img
         src="images/icon-star.svg"
         alt="a star icon"
@@ -57,10 +57,21 @@
     <!-- Thank you state start -->
 
     <!-- Add rating here -->
-    <div class="thank-card">
-      <span class="selected-rating">You selected 0</span>
-      out of 5 Thank you! We appreciate you taking the time to give a rating. If
-      you ever need more support, don’t hesitate to get in touch!
+    <div id="thank-card" class="thank-card">
+      <img
+        src="images/illustration-thank-you.svg"
+        alt="a thank you image"
+        class="thank-card__img"
+      />
+      <div class="selected-rating">
+        You selected <span id="rating"></span> out of 5
+      </div>
+
+      <h1 class="thank-card__header">Thank you!</h1>
+      <p class="thank-card__p">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
     </div>
 
     <!-- Thank you state end -->

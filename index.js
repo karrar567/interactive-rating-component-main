@@ -1,3 +1,7 @@
+const body = document.body;
+const ratingCard = document.getElementById("rating-card");
+const thankCard = document.getElementById("thank-card");
+const ratingSpan = document.getElementById("rating");
 const ratingForm = document.getElementById("rating-form");
 const ratingBtns = document.getElementById("rating-container").children;
 const ratingBtnsList = Array.from(ratingBtns);
@@ -30,5 +34,9 @@ ratingBtnsList.forEach((btn) => {
 
 ratingForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log(rating);
+  if (rating > 0) {
+    body.removeChild(ratingCard);
+    ratingSpan.innerHTML = `${rating}`;
+    thankCard.style.display = "flex";
+  }
 });

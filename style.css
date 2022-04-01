@@ -25,9 +25,6 @@ button {
 
 .rating-card,
 .thank-card {
-  border: 1px solid #000000;
-}
-.rating-card {
   display: flex;
   flex-direction: column;
   gap: 1.125em;
@@ -38,7 +35,8 @@ button {
   padding: 1em;
   border-radius: 50%;
 }
-.rating-card {
+.rating-card,
+.thank-card {
   background-color: var(--Dark-Blue);
   border-radius: 16px;
   position: absolute;
@@ -50,19 +48,15 @@ button {
   font-size: 15px;
   line-height: 1.5;
 }
-.rating-card__header {
+.rating-card__header,
+.thank-card__header {
   color: var(--White);
 }
-.rating-card__p {
+.rating-card__p,
+.thank-card__p {
   color: var(--Light-Grey);
 }
 
-.thank-card {
-  display: none;
-}
-.selected-rating {
-  color: blue;
-}
 #rating-form {
   display: flex;
   flex-direction: column;
@@ -112,4 +106,20 @@ input[type="button"]:active {
 }
 .submit-btn:active {
   background-color: rgb(231, 231, 231);
+}
+.thank-card {
+  text-align: center;
+  align-items: center;
+}
+.thank-card__img {
+  width: 60%;
+}
+.selected-rating {
+  color: var(--primary-color);
+  background-color: hsl(216, 18%, 22%);
+  padding: 0.3em 0.8em;
+  border-radius: 100vh;
+}
+.thank-card {
+  display: none;
 }
