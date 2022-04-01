@@ -30,7 +30,7 @@ button {
 .rating-card {
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1.125em;
 }
 .rating-card__icon {
   width: 50px;
@@ -63,29 +63,53 @@ button {
 .selected-rating {
   color: blue;
 }
-.rating-container {
+#rating-form {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  gap: 1.5em;
+  font-size: 15px;
+  font-weight: 700;
 }
-.rating-container button {
-  padding: 1em 1.5em;
+#rating-container {
+  display: flex;
+  justify-content: space-between;
+}
+input[type="button"] {
+  border: 0;
+  padding: 0.6em 1.3em;
   border-radius: 50%;
   background-color: hsl(216, 18%, 22%);
   color: var(--Medium-Grey);
-  font-weight: 700;
+  font: inherit;
 }
-.rating-container button:hover {
+input[type="button"]:hover {
   background-color: var(--Light-Grey);
   color: var(--White);
 }
-.rating-container button:active {
+input[type="button"]:active {
   background-color: var(--Medium-Grey);
 }
 
-.rating-container .selected {
+#rating-container .selected {
   background-color: var(--primary-color);
   color: white;
 }
-.rating-container .selected:hover {
+#rating-container .selected:hover {
   background-color: var(--primary-dark);
+}
+.submit-btn {
+  padding: 0.7em;
+  border-radius: 100vh;
+  background-color: var(--primary-color);
+  color: var(--White);
+  text-transform: uppercase;
+  font: inherit;
+  letter-spacing: 1.5px;
+}
+.submit-btn:hover {
+  color: var(--primary-color);
+  background-color: var(--White);
+}
+.submit-btn:active {
+  background-color: rgb(231, 231, 231);
 }
