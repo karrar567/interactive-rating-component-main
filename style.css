@@ -44,7 +44,7 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 1.8em 1.3em;
-  width: 90%;
+  width: min(90%, 390px);
   font-size: 15px;
   line-height: 1.5;
 }
